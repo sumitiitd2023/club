@@ -1,0 +1,743 @@
+
+{% extends "base.html" %}
+
+{% block style %}
+
+<!--<link href="../static/css/bootstrap.min.css" rel="stylesheet">-->
+<!--<link href="../static/css/css2.css" rel="stylesheet">-->
+<!--<link href="../static/css/css2_002.css" rel="stylesheet">-->
+<!--<link href="../static/css/aos.css" rel="stylesheet">-->
+<!--<link href="../static/css/style_002.css" rel="stylesheet">-->
+<!--<link rel="stylesheet" id="contact-form-7-css" href="../static/css/styles.css" media="all">-->
+
+<link href="../static/css/bootstrap.min.css" rel="stylesheet">
+<link href="../static/css/css2.css" rel="stylesheet">
+<link href="../static/css/css2_002.css" rel="stylesheet">
+<link rel="stylesheet" id="contact-form-7-css" href="../static/css/styles.css" media="all">
+<link rel="stylesheet" id="twenty-twenty-one-style-css" href="../static/css/style.css" media="all">
+
+    <style>
+         table {
+            width: 80%;
+            margin: 20px 0;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #3c7366;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        td {
+            border-bottom: 1px solid #ddd;
+        }
+        .fa-clock-o {
+            margin-right: 8px;
+        }
+
+
+
+        .gallery {
+            position: relative;
+            width: 80%;
+            max-width: 800px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 0 0px rgba(0, 0, 0, 0.1);
+        }
+        .gallery img {
+            width: 100%;
+            display: none;
+            transition: opacity 1s ease-in-out;
+        }
+        .gallery img.active {
+            display: block;
+            opacity: 1;
+        }
+
+
+    </style>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Button Styling */
+        .btn {
+            background-color: #3c7366; /* Blue background */
+            border: none; /* Remove borders */
+            color: white; /* White text */
+            padding: 12px 24px; /* Padding for the button */
+            text-align: center; /* Centered text */
+            text-decoration: none; /* Remove underline */
+            display: inline-flex; /* Inline flex for alignment */
+            align-items: center; /* Center content vertically */
+            font-size: 16px; /* Font size */
+            margin: 10px; /* Margin around the button */
+            cursor: pointer; /* Pointer cursor on hover */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s, transform 0.3s; /* Transition effects */
+        }
+
+        .btn:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        .btn i.fa {
+            margin-right: 8px; /* Space between icon and text */
+        }
+
+        /* Table Styling */
+        .table-container {
+            display: none; /* Hide by default */
+            margin: 20px 0; /* Margin for spacing */
+        }
+
+        table {
+            width: 100%; /* Full width */
+            border-collapse: collapse; /* Remove spacing between borders */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+            font-family: Arial, sans-serif; /* Font style */
+        }
+
+        th, td {
+            border: 1px solid #ddd; /* Gray border */
+            padding: 12px; /* Padding for cells */
+            text-align: left; /* Align text to the left */
+        }
+
+        th {
+            background-color: #f4f4f4; /* Light gray background for headers */
+            color: #333; /* Darker text color for headers */
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9; /* Stripe pattern */
+        }
+
+        tr:hover {
+            background-color: #f1f1f1; /* Highlight row on hover */
+        }
+    </style>
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="facility-1">
+    <div class="container">
+
+      <div class="col-md-10 mx-auto  fclty-hd">
+
+        <div class="hd-mn1">
+          <h2>Sports</h2>
+        </div>
+        <div class="des-1">
+          <p>Bharat Electronics Officers' Club boasts an impressive range of sports facilities, including tennis, squash, table tennis, badminton, and snooker.
+              The club also features a well-equipped gym and a large swimming pool. Members can participate in yoga, karate, and carom classes.
+              Additionally, the club hosts competitive sports tournaments for its members from time to time.
+          </p>
+
+        </div>
+
+      </div>
+
+      <div class="col-md-12 fclty-1">
+                        <div class="row fclty-mn-bx">
+          <div class="col-md-6 fclty-img">
+              <div class="gallery gallery-swim">
+                    <img src="../static/images/sport/billiards.jpg" class="img-fluid active" alt="Billiards">
+                    <img src="../static/images/sport/tennis.jpg" class="img-fluid" alt="Tennis">
+                    <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="Squash">
+                    <img src="../static/images/sport/swim.jpg" class="img-fluid" alt="Swimming">
+                    <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="Gym">
+              </div>
+<!--            <img src="../static/images/sport/swim.jpg" class="img-fluid" alt="img">-->
+          </div>
+          <div class="col-md-6 fclty-cntnt my-auto">
+              <h3>GYM</h3>
+              <div class="des-1">
+                <p>The club's large pool is a popular attraction for all ages, known for its excellent cleanliness and maintenance.
+                    Coaching is available for both adults and children, making it a favored destination for swimming enthusiasts.</p>
+              </div>
+    <div>
+    <button class="btn" onclick="toggleTable('gym')"><i class="fa fa-dumbbell"></i>Operating Hours of GYM</button>
+    <button class="btn" onclick="toggleTable('gym-price')"><i class="fa fa-dumbbell"></i>Price List of GYM</button>
+    <div id="gym" class="table-container">
+        <button class="btn" onclick="toggleTable('gym')"><i class="fa fa-dumbbell"></i> Hide GYM Hours</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Morning Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Member/Spouse</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 7:00am to 12:00pm</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 6:00pm to 10:00pm</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="gym-price" class="table-container">
+        <button class="btn" onclick="toggleTable('gym-price')"><i class="fa fa-dumbbell"></i> Hide GYM Price List</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Morning Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Member/Spouse</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 7:00am to 12:00pm</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 6:00pm to 10:00pm</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+        </div>
+              <h6>Timings May Differ. Please Check With The Reception For More Details</h6>
+          </div>
+        </div>
+
+              <div class="row fclty-mn-bx">
+          <div class="col-md-6 fclty-img">
+              <div class="gallery gallery-swim">
+                    <img src="../static/images/sport/billiards.jpg" class="img-fluid active" alt="Billiards">
+                    <img src="../static/images/sport/tennis.jpg" class="img-fluid" alt="Tennis">
+                    <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="Squash">
+                    <img src="../static/images/sport/swim.jpg" class="img-fluid" alt="Swimming">
+                    <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="Gym">
+              </div>
+<!--            <img src="../static/images/sport/swim.jpg" class="img-fluid" alt="img">-->
+          </div>
+          <div class="col-md-6 fclty-cntnt my-auto">
+              <h3>SWIMMING POOL</h3>
+              <div class="des-1">
+                <p>The club's large pool is a popular attraction for all ages, known for its excellent cleanliness and maintenance.
+                    Coaching is available for both adults and children, making it a favored destination for swimming enthusiasts.</p>
+              </div>
+
+    <div>
+    <button class="btn" onclick="toggleTable('swimming')"><i class="fa fa fa-swimmer"></i>Operating Hours of Swimming</button>
+    <button class="btn" onclick="toggleTable('swimming-price')"><i class="fa fa fa-swimmer"></i>Price List of Swimming</button>
+    <div id="swimming" class="table-container">
+        <button class="btn" onclick="toggleTable('swimming')"><i class="fa fa fa-swimmer"></i> Hide Swimming Hours</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Morning Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Member/Spouse</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 7:00am to 12:00pm</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 6:00pm to 10:00pm</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+     <div id="swimming-price" class="table-container">
+        <button class="btn" onclick="toggleTable('swimming-price')"><i class="fa fa-dumbbell"></i> Hide Swimming Price List</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Morning Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Member/Spouse</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 7:00am to 12:00pm</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 6:00pm to 10:00pm</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+        </div>
+
+              <h6>Timings May Differ. Please Check With The Reception For More Details</h6>
+          </div>
+        </div>
+              <div class="row fclty-mn-bx">
+          <div class="col-md-6 fclty-img">
+              <div class="gallery gallery-tennis">
+                    <img src="../static/images/sport/billiards.jpg" class="img-fluid active" alt="Billiards">
+                    <img src="../static/images/sport/tennis.jpg" class="img-fluid" alt="Tennis">
+                    <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="Squash">
+                    <img src="../static/images/sport/swim.jpg" class="img-fluid" alt="Swimming">
+                    <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="Gym">
+              </div>
+<!--            <img src="../static/images/sport/tennis.jpg" class="img-fluid" alt="img">-->
+          </div>
+          <div class="col-md-6 fclty-cntnt my-auto">
+              <h3>TENNIS</h3>
+              <div class="des-1">
+                <p>Tennis is a much sought-after sport. There are six
+clay Tennis Courts, three of which are floodlit. The popularity of this
+sport can be gauged by the number of courts there are! We also provide
+coaching for adults and children.</p>
+              </div>
+<div>
+    <button class="btn" onclick="toggleTable('tennis')"><i class="fa fa-table-tennis"></i>Operating Hours of Tennis</button>
+    <button class="btn" onclick="toggleTable('tennis-price')"><i class="fa fa-table-tennis"></i>Price List of Tennis</button>
+    <div id="tennis" class="table-container">
+        <button class="btn" onclick="toggleTable('tennis')"><i class="fa fa-table-tennis"></i> Hide Tennis Hours</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Morning Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Member/Spouse</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 7:00am to 12:00pm</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 6:00pm to 10:00pm</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+         <div id="tennis-price" class="table-container">
+        <button class="btn" onclick="toggleTable('tennis-price')"><i class="fa fa-dumbbell"></i> Hide Tennis Price List</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Morning Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Member/Spouse</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 7:00am to 12:00pm</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 6:00pm to 10:00pm</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+        </div>
+
+              <h6>Timings May Differ. Please Check With The Reception For More Details</h6>
+          </div>
+        </div>
+              <div class="row fclty-mn-bx">
+          <div class="col-md-6 fclty-img">
+              <div class="gallery">
+                    <img src="../static/images/sport/billiards.jpg" class="img-fluid active" alt="Billiards">
+                    <img src="../static/images/sport/tennis.jpg" class="img-fluid" alt="Tennis">
+                    <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="Squash">
+                    <img src="../static/images/sport/swim.jpg" class="img-fluid" alt="Swimming">
+                    <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="Gym">
+              </div>
+<!--            <img src="../static/images/sport/badminton.jpg" class="img-fluid" alt="img">-->
+          </div>
+          <div class="col-md-6 fclty-cntnt my-auto">
+              <h3>BADMINTION</h3>
+              <div class="des-1">
+                <p>There are two floodlit Badmintion Courts near the tennis courts. A third court is presently under construction.</p>
+              </div>
+
+    <div>
+    <button class="btn" onclick="toggleTable('badminton')"><i class="fa fa-table-tennis"></i>Operating Hours of Badminton</button>
+    <button class="btn" onclick="toggleTable('badminton-price')"><i class="fa fa-table-tennis"></i>Price List of Badminton</button>
+    <div id="badminton" class="table-container">
+        <button class="btn" onclick="toggleTable('badminton')"><i class="fa fa-table-tennis"></i> Hide Badminton Hours</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Morning Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Member/Spouse</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 7:00am to 12:00pm</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 6:00pm to 10:00pm</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+       <div id="badminton-price" class="table-container">
+        <button class="btn" onclick="toggleTable('badminton-price')"><i class="fa fa-dumbbell"></i> Hide Badminton Price List</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Morning Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Member/Spouse</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 7:00am to 12:00pm</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 6:00pm to 10:00pm</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+        </div>
+               <h6>Timings May Differ. Please Check With The Reception For More Details</h6>
+          </div>
+        </div>
+        <div class="row fclty-mn-bx">
+              <div class="col-md-6 fclty-img">
+                <div class="gallery">
+                    <img src="../static/images/sport/billiards.jpg" class="img-fluid active" alt="Billiards">
+                    <img src="../static/images/sport/tennis.jpg" class="img-fluid" alt="Tennis">
+                    <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="Squash">
+                    <img src="../static/images/sport/swim.jpg" class="img-fluid" alt="Swimming">
+                    <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="Gym">
+                </div>
+<!--                <img src="../static/images/sport/billiards.jpg" class="img-fluid" alt="img">-->
+              </div>
+              <div class="col-md-6 fclty-cntnt my-auto">
+                  <h3>BILLIARD’S ROOM</h3>
+                  <div class="des-1">
+                    <p>The spacious Billiard’s Room has two billiard tables and is located on the ground floor. A sport which is still in vogue!</p>
+                  </div>
+<div>
+<button class="btn" onclick="toggleTable('billiard')"><i class="fa fa-bowling-ball"></i>Operating Hours of Billiards</button>
+<button class="btn" onclick="toggleTable('billiard-price')"><i class="fa fa-bowling-ball"></i>Price List of Billiards</button>
+    <div id="billiard" class="table-container">
+        <button class="btn" onclick="toggleTable('billiard')"><i class="fa fa-bowling-ball"></i> Hide Billiards Hours</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Morning Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Member/Spouse</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 7:00am to 12:00pm</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 6:00pm to 10:00pm</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+           <div id="billiard-price" class="table-container">
+        <button class="btn" onclick="toggleTable('billiard-price')"><i class="fa fa-dumbbell"></i> Hide Billiard Price List</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Daily (in Rs.)</th>
+                    <th>Monthly (in Rs.)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Member/Spouse</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 7:00am to 12:00pm</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 6:00pm to 10:00pm</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+        </div>
+                  <h6>Timings May Differ. Please Check With The Reception For More Details</h6>
+              </div>
+        </div>
+
+              <div class="row fclty-mn-bx">
+          <div class="col-md-6 fclty-img">
+              <div class="gallery">
+                    <img src="../static/images/sport/billiards.jpg" class="img-fluid active" alt="Billiards">
+                    <img src="../static/images/sport/tennis.jpg" class="img-fluid" alt="Tennis">
+                    <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="Squash">
+                    <img src="../static/images/sport/swim.jpg" class="img-fluid" alt="Swimming">
+                    <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="Gym">
+              </div>
+<!--            <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="img">-->
+          </div>
+          <div class="col-md-6 fclty-cntnt my-auto">
+              <h3>SQUASH</h3>
+              <div class="des-1">
+                <p>Squash is yet another sought- after sport with a
+steady stream of players. Coaching is available for beginners. Regular
+tournaments are held for members.</p>
+              </div>
+     <div>
+      <button class="btn" onclick="toggleTable('squash')"><i class="fa fa-table-tennis"></i>Operating Hours of Squash</button>
+      <button class="btn" onclick="toggleTable('squash-price')"><i class="fa fa-table-tennis"></i>Price List of Squash</button>
+    <div id="squash" class="table-container">
+        <button class="btn" onclick="toggleTable('squash')"><i class="fa fa-table-tennis"></i> Hide Squash Hours</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Morning Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Member/Spouse</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 7:00am to 12:00pm</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 6:00pm to 10:00pm</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+               <div id="squash-price" class="table-container">
+        <button class="btn" onclick="toggleTable('squash-price')"><i class="fa fa-dumbbell"></i> Hide Squash Price List</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Daily (in Rs.)</th>
+                    <th>Monthly (in Rs.)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Member/Spouse</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 7:00am to 12:00pm</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 6:00pm to 10:00pm</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+        </div>
+              <h6>Timings May Differ. Please Check With The Reception For More Details</h6>
+          </div>
+        </div>
+              <div class="row fclty-mn-bx">
+          <div class="col-md-6 fclty-img">
+              <div class="gallery">
+                    <img src="../static/images/sport/billiards.jpg" class="img-fluid active" alt="Billiards">
+                    <img src="../static/images/sport/tennis.jpg" class="img-fluid" alt="Tennis">
+                    <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="Squash">
+                    <img src="../static/images/sport/swim.jpg" class="img-fluid" alt="Swimming">
+                    <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="Gym">
+              </div>
+<!--            <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="img">-->
+          </div>
+          <div class="col-md-6 fclty-cntnt my-auto">
+              <h3>Karate</h3>
+              <div class="des-1">
+                <p>Bridge and Rummy are both popular card-games with
+their own loyal followers. The Club has a designated Rummy Room and a
+designated Bridge Room which are packed to capacity most evenings!</p>
+              </div>
+<div>
+  <button class="btn" onclick="toggleTable('karate')"><i class="fa fa-basketball-ball"></i> Operating hours of Karate</button>
+  <button class="btn" onclick="toggleTable('karate-price')"><i class="fa fa-basketball-ball"></i> Price List of Karate</button>
+        <div id="karate" class="table-container">
+        <button class="btn" onclick="toggleTable('karate')"><i class="fa fa-times"></i> Hide Karate Operating Hours</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Morning Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Member/Spouse</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 7:00am to 12:00pm</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 6:00pm to 10:00pm</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="karate-price" class="table-container">
+        <button class="btn" onclick="toggleTable('karate-price')"><i class="fa fa-dumbbell"></i> Hide Karate Price List</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Daily (in Rs.)</th>
+                    <th>Monthly (in Rs.)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Member/Spouse</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 7:00am to 12:00pm</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 6:00pm to 10:00pm</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+    </div>
+          <h6>Timings May Differ. Please Check With The Reception For More Details</h6>
+          </div>
+        </div>
+              <div class="row fclty-mn-bx">
+          <div class="col-md-6 fclty-img">
+              <div class="gallery">
+                    <img src="../static/images/sport/billiards.jpg" class="img-fluid active" alt="Billiards">
+                    <img src="../static/images/sport/tennis.jpg" class="img-fluid" alt="Tennis">
+                    <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="Squash">
+                    <img src="../static/images/sport/swim.jpg" class="img-fluid" alt="Swimming">
+                    <img src="../static/images/sport/squash.jpg" class="img-fluid" alt="Gym">
+              </div>
+<!--            <img src="../static/images/sport/table.jpg" class="img-fluid" alt="img">-->
+          </div>
+          <div class="col-md-6 fclty-cntnt my-auto">
+              <h3>TABLE TENNIS</h3>
+              <div class="des-1">
+                <p>A new table tennis table is housed in a new custom built Table Tennis Room much to the delight of our members! </p>
+
+              </div>
+
+ <div>
+     <button class="btn" onclick="toggleTable('tabletennis')"><i class="fa fa-table-tennis"></i> Operating Hours of Table Tennis</button>
+     <button class="btn" onclick="toggleTable('tabletennis-price')"><i class="fa fa-table-tennis"></i> Price List of Table Tennis</button>
+    <div id="tabletennis" class="table-container">
+        <button class="btn" onclick="toggleTable('tabletennis')"><i class="fa fa-table-tennis"></i> Hide Table Tennis Hours</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Morning Session</th>
+                    <th>Evening Session</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Member/Spouse</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 7:00am to 12:00pm</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 6:00pm to 10:00pm</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+
+    <div id="tabletennis-price" class="table-container">
+        <button class="btn" onclick="toggleTable('tabletennis-price')"><i class="fa fa-dumbbell"></i> Hide Table Tennis Price List</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Category</th>
+                    <th>Daily (in Rs.)</th>
+                    <th>Monthly (in Rs.)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Member/Spouse</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 7:00am to 12:00pm</td>
+                    <td><i class="fa fa-clock-o" aria-hidden="true"></i> 6:00pm to 10:00pm</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+    </div>
+              <h6>Timings May Differ. Please Check With The Reception For More Details</h6>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block javascript %}
+  <!-- Add this script at the end of the <body> section -->
+<script src="../static/js/jquery-3.6.0.min.js"></script>
+<!--<script src="Sports_files/jquery.min.js" id="jquery-core-js"></script>-->
+<!--<script src="Sports_files/jquery-migrate.min.js" id="jquery-migrate-js"></script>-->
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const galleries = document.querySelectorAll('.gallery');
+
+        galleries.forEach(gallery => {
+            let currentIndex = 0;
+            const images = gallery.querySelectorAll('img');
+            const totalImages = images.length;
+
+            function showNextImage() {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % totalImages;
+                images[currentIndex].classList.add('active');
+            }
+
+            setInterval(showNextImage, 3000); // Change image every 3 seconds
+        });
+    });
+</script>
+
+    <script>
+        function toggleTable(sport) {
+            var table = document.getElementById(sport);
+            var tables = document.querySelectorAll('.table-container');
+
+            tables.forEach(function(t) {
+                if (t.id !== sport) {
+                    t.style.display = 'none'; // Hide other tables
+                }
+            });
+
+            if (table.style.display === 'none' || table.style.display === '') {
+                table.style.display = 'block';
+            } else {
+                table.style.display = 'none';
+            }
+        }
+    </script>
+
+{% endblock %}
